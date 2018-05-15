@@ -1,0 +1,20 @@
+# Required
+name: ${name}
+version: ${version}
+main: ${groupId}.${artifactId}.${name}Plugin
+
+# Optional
+description: ${description}
+author: ${author}
+depend: [Vault]
+
+commands:
+    say:
+        description: Replaces default minecraft /say command
+        usage: /<command> <message>
+        permission: rank.say
+
+permissions:
+    rank.say:
+        description: Main permission
+        default: op

@@ -1,0 +1,6 @@
+# ----------------------------------
+#   Configuration file for RankSay
+# ----------------------------------
+
+# Essentials color chars work here
+format: '[%RANK%]: %MESSAGE%'
