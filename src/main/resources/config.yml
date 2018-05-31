@@ -3,4 +3,11 @@
 # ----------------------------------
 
 # Essentials color chars work here
-format: '[%RANK%]: %MESSAGE%'
+#		Placeholders also work:
+#			- %MESSAGE%
+#			- %RANK%
+#			- %PLAYER_PREFIX%
+#			- %DISPLAY_NAME%
+#			- %PLAYER_NAME%
+#
+format: '[%PLAYER_PREFIX%]: %MESSAGE%'

@@ -31,7 +31,13 @@ public class RankSayCommand implements CommandExecutor {
 
 		String message = String.join(" ", args);
 
-		String broadcast = ChatColor.translateAlternateColorCodes('&', format.replace("%RANK%", RankSayPlugin.getPerms().getPrimaryGroup(player)).replace("%MESSAGE%", message));
+		format = format.replace("%RANK%", RankSayPlugin.getPerms().getPrimaryGroup(player));
+		format = format.replace("%PLAYER_PREFIX%", RankSayPlugin.getChat().getPlayerPrefix(player));
+		format = format.replace("%DISPLAY_NAME%", player.getDisplayName());
+		format = format.replace("%PLAYER_NAME%", player.getName());
+		format = format.replace("%MESSAGE%", message);
+
+		String broadcast = ChatColor.translateAlternateColorCodes('&', format);
 
 		for (Player p : Bukkit.getOnlinePlayers()) {
 			p.sendMessage(broadcast);
